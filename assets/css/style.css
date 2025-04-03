@@ -71,6 +71,7 @@
   --transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
   --transition-duration-quick: 200ms;
   --transition-duration-smooth: 500ms;
+  --gradient: linear-gradient(270deg, #0f4392 0%, #001d3d 100%);
 
 }
 
@@ -111,6 +112,7 @@ button {
 input, select {
   width: 100%;
   outline: none;
+  border: none;
 }
 
 address {
@@ -416,16 +418,109 @@ body {
   color: var(--primary-100);
 }
 
-.navbar .btn {min-width: 100%;}
+.navbar .btn {
+  min-width: 100%;
+}
+
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
 
 
 
+.hero-banner {
+  display: none;
+}
+
+.hero {
+  position: relative;
+  background-image: var(--gradient);
+  color: var(--neutral-90);
+  padding-block: 130px 60px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero-title {
+  color: var(--neutral-100);
+}
+
+.hero-text {
+  margin-block: 16px 32px;
+}
+
+.search-bar {
+  background: var(--white);
+  display: grid;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-4);
+}
+
+.search-item {
+  position: relative;
+  color: var(--neutral-50);
+  ;
+}
+
+.search-item .search-item-field {
+  height: 77px;
+  padding: 40px 16px 12px;
+  border-radius: var(--radius-medium);
+  cursor: pointer;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.search-item .search-item-field:where(:hover, :focus) {
+  background-color: var(--neutral-95);
+}
+
+.search-item:where(.label, .material-symbols-rounded) {
+  position: absolute;
+  pointer-events: none;
+}
 
 
-/*-----------------------------------*\
+
+.search-item .label {
+  top: 12px;
+  left: 16px;
+  color: var(--neutral-5);
+}
+
+.search-item .material-symbols-rounded {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%,-50%);
+  color: var(--primary-100);
+}
+
+.search-btn {
+  background: var(--primary-100);
+  color: var(--neutral-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  padding-inline: 24px;
+  gap: 12px;
+  border-radius: 12px;
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.search-btn:where(:hover, :focus) {
+  background-color: var(--primary-80);
+}
+
+.search-btn:where(:active, :focus-visible) {
+  background-color: var(--primary-70);
+}
+
+/*------
+
+-----------------------------*\
   #PROPERTY
 \*-----------------------------------*/
 
