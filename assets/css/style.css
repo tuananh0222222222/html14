@@ -466,7 +466,7 @@ body {
 
 .search-item .search-item-field {
   height: 77px;
-  padding: 40px 16px 12px;
+  padding: 12px;
   border-radius: var(--radius-medium);
   cursor: pointer;
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
@@ -493,8 +493,8 @@ body {
   position: absolute;
   top: 50%;
   right: 16px;
-  transform: translateY(-50%,-50%);
   color: var(--primary-100);
+
 }
 
 .search-btn {
