@@ -694,9 +694,40 @@ body {
   #FEATURE
 \*-----------------------------------*/
 
+.feature-banner {
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  border-radius: var(--radius-large);
+}
+
+.feature-content {
+  padding: 24px 16px 0;
+
+
+}
+
+.feature-content .section-text {
+  margin-block: 16px;
+}
 
 
 
+.feature-list {
+  display: grid;
+  gap: 12px;
+  padding: 24px 16px 0;
+
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-icon {
+  color: var(--primary-100);
+}
 
 /*-----------------------------------*\
   #VIDEO
