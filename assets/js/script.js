@@ -16,3 +16,10 @@ const $header = document.querySelector("[data-header]");
 window, addEventListener("scroll", () => {
     $header.classList[window.scrollY > 50 ? "add" : "remove"]("active");
 })
+
+const $toggleBtns = document.querySelectorAll("[data-toggle-btn]");
+$toggleBtns.forEach($togglebtn =>{
+    $togglebtn.addEventListener("click", () => {
+        $togglebtn.classList.toggle("active");
+    })
+})
